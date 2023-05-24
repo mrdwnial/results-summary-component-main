@@ -1,11 +1,28 @@
 :root {
+  /* Primary */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
 
+  /* Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: HankenGrotesk;
   border: none;
   outline: none;
 }
@@ -18,10 +35,161 @@ a {
 a:hover {
   color: var(--Soft-red);
 }
+html,
 body {
-
+  overflow-x: hidden;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 500, 700, 800;
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+@font-face {
+  font-family: HankenGrotesk;
+  src: url(../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: HankenGroteskBold;
+  src: url(../assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+@font-face {
+  font-family: HankenGroteskExtraBold;
+  src: url(../assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+
+.container-fluid .card-box-container .card-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 0; */
+}
+
+.container-fluid .card-box-container .card-box .left-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+  border-radius: 0 0 30px 30px;
+}
+.container-fluid .card-box-container .card-box .left-card-content h3 {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--Light-lavender);
+  letter-spacing: 0.5px;
+}
+.container-fluid .card-box-container .card-box .left-card-content .point-circle {
+  padding: 1.5em 2.2em;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+}
+.container-fluid .card-box-container .card-box .left-card-content .point-circle h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+  color: var(--White);
+}
+.container-fluid .card-box-container .card-box .left-card-content .point-circle p {
+  font-size: 0.9em;
+  margin: 0;
+  color: var(--Light-lavender);
+  opacity: 0.5;
+}
+.container-fluid .card-box-container .card-box .left-card-content h2 {
+  color: var(--White);
+}
+.container-fluid .card-box-container .card-box .left-card-content .info {
+  font-size: 0.9em;
+  color: var(--Light-lavender);
+}
+
+.container-fluid .card-box-container .card-box .right-card-content .title {
+  font-weight: bold;
+  color: var(--Dark-gray-blue);
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.7em 0;
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box:nth-child(1) {
+  background-color: hsl(0, 100%, 67%, 0.1);
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box:nth-child(2) {
+  background-color: hsl(39, 100%, 56%, 0.1);
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box:nth-child(3) {
+  background-color: hsl(166, 100%, 37%, 0.1);
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box:nth-child(4) {
+  background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box .badge {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box .badge b {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box:nth-child(1) .badge b {
+  color: var(--Light-red);
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box:nth-child(2) .badge b {
+  color: var(--Orangey-yellow);
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box:nth-child(3) .badge b {
+  color: var(--Green-teal);
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box:nth-child(4) .badge b {
+  color: var(--Cobalt-blue);
+}
+
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box p {
+  margin: 0;
+  text-align: end;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #8d8d8d;
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container .card-content-box p b {
+  color: var(--Dark-gray-blue);
+  font-weight: 700;
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container button {
+  padding: 0.7em 0;
+  border-radius: 50px;
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
+  font-weight: bold;
+  transition: .4s linear;
+}
+.container-fluid .card-box-container .card-box .right-card-content .rows-container button:hover,
+.container-fluid .card-box-container .card-box .right-card-content .rows-container button:active {
+  background: linear-gradient(to top, var(--Light-royal-blue), var(--Light-slate-blue));
+}
+
+@media screen and (min-width: 768px) {
+  /* .container-fluid .card-box-container .card-box .left-card-content {
+    border-radius: 0 30px 30px 0;
+  } */
 }
